@@ -1,0 +1,23 @@
+{
+  "name": "nodeserver",
+  "version": "1.0.0",
+  "description": "简单的Node测试",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skywalkerxl/NodeServer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skywalkerxl/NodeServer/issues"
+  },
+  "homepage": "https://github.com/skywalkerxl/NodeServer#readme",
+  "dependencies": {
+    "koa": "^2.5.1"
+  }
+}
