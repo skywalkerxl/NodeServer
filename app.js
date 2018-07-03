@@ -5,7 +5,7 @@ const controller = require('./controller');
 const app = new koa();
 
 app.use(async (ctx, next)=>{
-    console.log(`Process ${ctx.request.method} ${ctx.request.uri}`);
+    console.log(`Process ${ctx.request.method} ${ctx.request.url}`);
     await next();
 });
 

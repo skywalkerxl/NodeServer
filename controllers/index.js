@@ -1,5 +1,6 @@
-let fn_index = function (ctx, next) {
-    ctx.response.body = `Hello Index`;
+let fn_index = async function (ctx, next) {
+    ctx.response.body = `Index`;
+    await next();
 };
 
 module.exports = {
