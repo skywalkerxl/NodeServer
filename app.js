@@ -1,15 +1,17 @@
-const fs = require('fs');
-let files = fs.readdirSync(`${__dirname}/controllers`);
+const koa = require('koa');
+const bodyParser = require('koa-bodyparser');
+const controller = require('./controller');
 
-files.map((elt, i)=>{
-    console.log(elt);
+const app = new koa();
+
+app.use(async (ctx, next)=>{
+    console.log(`Process ${ctx.request.method} ${ctx.request.uri}`);
+    await next();
 });
 
-// 处理每个js文件
-for(let file of files){
-    console.log(`process controller ${file} ...`);
-}
+app.use(bodyParser());
 
-function addMapping(router, mapping) {
+app.use(controller());
 
-}
+app.listen(3000);
+console.log(`Server is running at port 3000`);

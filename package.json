@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/skywalkerxl/NodeServer#readme",
   "dependencies": {
-    "koa": "^2.5.1"
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
   }
 }
